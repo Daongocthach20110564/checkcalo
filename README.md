@@ -1,32 +1,19 @@
-# React + TypeScript + Vite
+<h1>Apple Clone Website</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This project is a clone of the Apple website created from scratch using HTML, CSS, and JavaScript. The goal was to replicate the design and functionality of the Apple website, focusing on responsiveness for the iPhone XR device. The project also incorporates animation and scroll triggers using Locomotive and GSAP, and sliding functionality is implemented with SwiperJS.
 
-Currently, two official plugins are available:
+Features
+HTML, CSS, JavaScript: The core technologies used to build the structure, style, and functionality of the website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Locomotive and GSAP Animation: Integration of Locomotive and GSAP libraries for smooth animations and scroll triggers, enhancing the user experience.
 
-## React Compiler
+SwiperJS: Utilized SwiperJS to implement sliding functionality, providing a seamless and interactive experience for users.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Responsive Design: The website is designed to be fully responsive, ensuring optimal viewing and interaction across various devices, with a specific focus on the iPhone XR.
 
-## Expanding the Oxlint configuration
+Demo
+For a live demo, check out my Website -> https://hashimownsapple.vercel.app/
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+If you'd like to contribute to my project, feel free to submit a pull request. Contributions are welcome!
