@@ -1,77 +1,87 @@
-function loco(){
-    gsap.registerPlugin(ScrollTrigger);
+// ══════════════════════════════════════════════════════════════
+// CHECK CALO INTERACTIVE SCRIPTS
+// ══════════════════════════════════════════════════════════════
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
+document.addEventListener("DOMContentLoaded", function () {
+    // 1. Mobile Menu Toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+    const menuIcon = document.getElementById("menuIcon");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
 
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("body"),
-  smooth: true
+    if (menuToggle && mobileNav) {
+        menuToggle.addEventListener("click", function () {
+            const isActive = mobileNav.classList.toggle("active");
+            if (menuIcon) {
+                if (isActive) {
+                    menuIcon.classList.remove("ri-menu-line");
+                    menuIcon.classList.add("ri-close-line");
+                } else {
+                    menuIcon.classList.remove("ri-close-line");
+                    menuIcon.classList.add("ri-menu-line");
+                }
+            }
+        });
+
+        mobileLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                mobileNav.classList.remove("active");
+                if (menuIcon) {
+                    menuIcon.classList.remove("ri-close-line");
+                    menuIcon.classList.add("ri-menu-line");
+                }
+            });
+        });
+    }
+
+    // 2. Swiper Carousel for App Screenshots Gallery
+    if (typeof Swiper !== "undefined") {
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 24,
+            loop: true,
+            grabCursor: true,
+            autoplay: {
+                delay: 2800,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            keyboard: {
+                enabled: true,
+            },
+            breakpoints: {
+                320: {
+                    spaceBetween: 16,
+                },
+                768: {
+                    spaceBetween: 24,
+                },
+                1024: {
+                    spaceBetween: 32,
+                },
+            },
+        });
+    }
+
+    // 3. Header Scroll Glass Effect
+    const siteHeader = document.querySelector(".site-header");
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 40) {
+            siteHeader.style.background = "rgba(10, 10, 12, 0.92)";
+            siteHeader.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.4)";
+        } else {
+            siteHeader.style.background = "rgba(18, 18, 20, 0.82)";
+            siteHeader.style.boxShadow = "none";
+        }
+    });
 });
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
-
-// tell ScrollTrigger to use these proxy methods for the "body" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("body", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("body").style.transform ? "transform" : "fixed"
-});
-
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
-
-}
-loco()
-
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "1.2",
-  centeredSlides: true,
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-      keyboard: true,
-      loop:true
-});
-
-
-var menu = document.querySelector(".ri-menu-line");
-var close = document.querySelector(".ri-close-line");
-var navbar = document.querySelector(".subnav");
-
-menu.addEventListener("click",function(){
-  navbar.style.top="0%";
-})
-
-close.addEventListener("click",function(){
-  navbar.style.top="-109%";
-})
-
-
-var Store = document.querySelector("#Store");
-var hovermenu = document.querySelector(".nav3");
-
-Store.addEventListener("mousemove",function(){
-  hovermenu.style.top="5%";
-})
-
-Store.addEventListener("mouseleave",function(){
-  hovermenu.style.top="-100%";
-})
