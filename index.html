@@ -3,493 +3,419 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Calo - Theo dõi Calo & Bữa ăn bằng Ảnh thông minh</title>
-    <meta name="description" content="Ứng dụng di động theo dõi calo và bữa ăn bằng ảnh, hỗ trợ quản lý dinh dưỡng, xác thực người dùng, đồng bộ dữ liệu và trải nghiệm đa ngôn ngữ trên iOS & Android.">
-    
-    <!-- Open Graph / SEO -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://checkcalo.ngocthach.me/">
-    <meta property="og:title" content="Check Calo - Theo dõi Calo & Bữa ăn bằng Ảnh">
-    <meta property="og:description" content="Ứng dụng di động theo dõi calo và bữa ăn bằng ảnh trên iOS & Android.">
-    <meta property="og:image" content="Assests/checkcalo/checkcalo-banner.webp">
-
+    <title>Check Calo - Theo dõi Calo & Bữa ăn bằng Ảnh</title>
     <link rel="shortcut icon" href="Assests/logo.png" type="image/png">
-    
-    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="body">
 
-    <!-- Global Apple-style Header -->
-    <header class="site-header">
-        <nav class="nav-container">
-            <a href="#" class="brand-logo">
-                <img src="Assests/logo.png" alt="Check Calo Logo" class="app-logo-nav" />
-                <span class="brand-text">Check Calo</span>
-            </a>
-
-            <div class="nav-links">
-                <a href="#hero">Giới thiệu</a>
-                <a href="#features">Tính năng AI</a>
-                <a href="#nutrition">Dinh dưỡng</a>
-                <a href="#tracking">Mục tiêu</a>
-                <a href="#gallery">Thư viện</a>
-                <a href="#download" class="nav-cta-link">Tải ứng dụng</a>
-            </div>
-
-            <div class="nav-actions">
-                <a href="#download" class="header-download-btn">Tải App</a>
-                <button class="mobile-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <i class="ri-menu-line" id="menuIcon"></i>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Mobile Navigation Menu -->
-        <div class="mobile-nav" id="mobileNav">
-            <div class="mobile-nav-inner">
-                <a href="#hero" class="mobile-link">Giới thiệu</a>
-                <a href="#features" class="mobile-link">Tính năng AI</a>
-                <a href="#nutrition" class="mobile-link">Dinh dưỡng</a>
-                <a href="#tracking" class="mobile-link">Mục tiêu</a>
-                <a href="#gallery" class="mobile-link">Thư viện</a>
-                <div class="mobile-store-buttons">
-                    <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer" class="store-badge-sm">
-                        <img src="Assests/icons/apple.svg" alt="App Store" />
-                        <span>App Store</span>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" rel="noopener noreferrer" class="store-badge-sm">
-                        <img src="Assests/icons/playstore.svg" alt="Google Play" />
-                        <span>Google Play</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Top Announcement Ribbon -->
-    <div class="announcement-ribbon">
-        <div class="ribbon-content">
-            <span class="ribbon-tag">Mới</span>
-            <span>Check Calo đã chính thức phát hành trên App Store & Google Play.</span>
-            <a href="#download">Tải ngay &gt;</a>
-        </div>
-    </div>
-
-    <main id="main">
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <!-- SECTION 1: CỤM HERO ĐẦU TIÊN (Title, Intro, Store Links, Banner) -->
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <section class="hero-section" id="hero">
-            <div class="hero-container">
-                <div class="hero-badge">
-                    <img src="Assests/logo.png" alt="Check Calo" class="badge-logo" />
-                    <span>AI Nutrition Assistant</span>
-                </div>
-
-                <h1 class="hero-title">Check Calo</h1>
-                <p class="hero-tagline">Theo dõi calo và bữa ăn thông minh bằng ảnh</p>
-                <p class="hero-description">
-                    Chụp ảnh món ăn, nhận diện thành phần dinh dưỡng ngay lập tức. Quản lý Calo, chỉ số Macros và tiến trình sức khỏe của bạn một cách khoa học trên iOS & Android.
-                </p>
-
-                <!-- Store Buttons in Hero Section -->
-                <div class="store-buttons-container">
-                    <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer" class="apple-store-btn" title="Tải trên App Store">
-                        <div class="btn-icon">
-                            <img src="Assests/icons/apple.svg" alt="Apple logo" />
-                        </div>
-                        <div class="btn-text">
-                            <span class="sub-text">Download on the</span>
-                            <span class="main-text">App Store</span>
-                        </div>
+    <div id="main">
+        <div id="page1">
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- NAVBAR 1: APPLE STYLE GLOBAL NAV                               -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <nav>
+                <div class="nav-items">
+                    <a href="#" class="nav-brand">
+                        <img src="Assests/logo.png" alt="Check Calo Logo" class="nav-app-logo" />
+                        <span>Check Calo</span>
                     </a>
 
-                    <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" rel="noopener noreferrer" class="google-play-btn" title="Tải trên Google Play">
-                        <div class="btn-icon">
-                            <img src="Assests/icons/playstore.svg" alt="Google Play logo" />
-                        </div>
-                        <div class="btn-text">
-                            <span class="sub-text">GET IT ON</span>
-                            <span class="main-text">Google Play</span>
-                        </div>
-                    </a>
-                </div>
+                    <div class="nav-links-desktop">
+                        <a href="#hero1">Tổng quan</a>
+                        <a href="#hero2">Camera AI</a>
+                        <a href="#hero3">Dinh dưỡng</a>
+                        <a href="#grid1">Nhật ký</a>
+                        <a href="#grid2">Mục tiêu</a>
+                        <a href="#slider">Màn hình</a>
+                    </div>
 
-                <!-- Hero Banner Showcase (checkcalo-banner.webp) -->
-                <div class="hero-showcase">
-                    <div class="showcase-glow"></div>
-                    <div class="showcase-frame">
-                        <img src="Assests/checkcalo/checkcalo-banner.webp" alt="Check Calo App Banner Showcase" class="hero-banner-img" />
+                    <div class="nav-right-actions">
+                        <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer" class="nav-cta-btn">Tải App</a>
+                        <button class="menu-toggle-btn" id="menuToggle" aria-label="Toggle Menu">
+                            <i class="ri-menu-line" id="menuIcon"></i>
+                        </button>
                     </div>
                 </div>
+            </nav>
 
-                <!-- Highlight Stats -->
-                <div class="hero-stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-value">AI Camera</span>
-                        <span class="stat-label">Nhận diện đĩa ăn tức thì</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value">iOS & Android</span>
-                        <span class="stat-label">Hỗ trợ đầy đủ đa nền tảng</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value">Macros & Kcal</span>
-                        <span class="stat-label">Đo lường năng lượng chuẩn xác</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value">Cloud Sync</span>
-                        <span class="stat-label">Đồng bộ an toàn cùng Supabase</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <!-- SECTION 2: TÍNH NĂNG NHẬN DIỆN MÓN ĂN BẰNG ẢNH (AI Camera) -->
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <section class="feature-duo-section" id="features">
-            <div class="section-header">
-                <span class="section-label">Công nghệ AI Thông minh</span>
-                <h2 class="section-title">Chụp ảnh. Nhận diện. Tính Calo.</h2>
-                <p class="section-subtitle">Chỉ với 1 lần chạm máy ảnh, ứng dụng tự động bóc tách từng thành phần trong đĩa ăn.</p>
+            <!-- Mobile Subnav Menu -->
+            <div class="subnav" id="subnav">
+                <a href="#hero1" class="mobile-item">Tổng quan</a>
+                <a href="#hero2" class="mobile-item">Camera AI</a>
+                <a href="#hero3" class="mobile-item">Dinh dưỡng</a>
+                <a href="#grid1" class="mobile-item">Nhật ký bữa ăn</a>
+                <a href="#grid2" class="mobile-item">Mục tiêu & Tiến trình</a>
+                <a href="#slider" class="mobile-item">Thư viện màn hình</a>
+                <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" class="mobile-item">Tải trên App Store &gt;</a>
+                <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" class="mobile-item">Tải trên Google Play &gt;</a>
             </div>
 
-            <div class="duo-grid">
-                <!-- Card 1: Check Calo 1 -->
-                <div class="duo-card dark-card">
-                    <div class="card-content">
-                        <span class="card-tag">Quét Camera</span>
-                        <h3 class="card-title">Chụp và phân tích tức thì</h3>
-                        <p class="card-desc">AI nhận diện nhanh các món ăn Việt Nam & quốc tế, ước tính trọng lượng và đưa ra tổng calo ngay trước mắt.</p>
-                    </div>
-                    <div class="card-media">
-                        <div class="phone-mockup">
-                            <img src="Assests/checkcalo/check-calo-1.webp" alt="Giao diện chụp ảnh món ăn Check Calo" loading="lazy" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Check Calo 2 -->
-                <div class="duo-card light-card">
-                    <div class="card-content">
-                        <span class="card-tag">Phân tích chuyên sâu</span>
-                        <h3 class="card-title">Chi tiết từng chất dinh dưỡng</h3>
-                        <p class="card-desc">Bảng dinh dưỡng trực quan: Lượng Calories, Protein (đạm), Carbohydrate (tinh bột) và Fat (chất béo) chuẩn mực.</p>
-                    </div>
-                    <div class="card-media">
-                        <div class="phone-mockup">
-                            <img src="Assests/checkcalo/check-calo-2.webp" alt="Chi tiết dinh dưỡng món ăn Check Calo" loading="lazy" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <!-- SECTION 3: QUẢN LÝ DINH DƯỠNG & BỮA ĂN (Nutrition & Meals) -->
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <section class="feature-duo-section" id="nutrition">
-            <div class="section-header">
-                <span class="section-label">Quản lý toàn diện</span>
-                <h2 class="section-title">Nhật ký bữa ăn trong tầm tay.</h2>
-                <p class="section-subtitle">Theo dõi thói quen nạp năng lượng mỗi ngày và cân đối chế độ ăn uống lành mạnh.</p>
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- NAVBAR 2: PROMO BANNER                                         -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <div class="nav2">
+                Ứng dụng theo dõi dinh dưỡng bằng ảnh thông minh đã có mặt trên iOS & Android. 
+                <a href="#hero1">Tải ngay miễn phí &gt;</a>
             </div>
 
-            <div class="duo-grid">
-                <!-- Card 3: Check Calo 3 -->
-                <div class="duo-card light-card">
-                    <div class="card-content">
-                        <span class="card-tag">Nhật ký hàng ngày</span>
-                        <h3 class="card-title">Phân chia từng bữa ăn</h3>
-                        <p class="card-desc">Bữa sáng, bữa trưa, bữa tối và ăn nhẹ được sắp xếp khoa học giúp bạn dễ dàng đối chiếu lượng calo đã nạp.</p>
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION ĐẦU TIÊN: CHECK CALO HERO 1 (BANNER + STORE LINKS) -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <section class="hero-stage hero-stage-dark" id="hero1">
+                <div class="stage-header">
+                    <div class="stage-badge stage-badge-purple">
+                        <span>AI NUTRITION ASSISTANT</span>
                     </div>
-                    <div class="card-media">
-                        <div class="phone-mockup">
-                            <img src="Assests/checkcalo/check-calo-3.webp" alt="Nhật ký bữa ăn hàng ngày" loading="lazy" />
-                        </div>
+                    <h1 class="stage-title">Check Calo</h1>
+                    <h2 class="stage-subtitle">Theo dõi calo và bữa ăn bằng ảnh</h2>
+                    <p class="stage-desc">
+                        Ứng dụng di động theo dõi calo và bữa ăn bằng ảnh, hỗ trợ quản lý dinh dưỡng, xác thực người dùng, đồng bộ dữ liệu và trải nghiệm đa ngôn ngữ trên iOS & Android.
+                    </p>
+
+                    <!-- App Store & Google Play Links -->
+                    <div class="store-btn-group">
+                        <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer" class="store-apple-btn">
+                            <img src="Assests/icons/apple.svg" alt="App Store" />
+                            <div>
+                                <span class="btn-caption">Download on the</span>
+                                <span class="btn-label">App Store</span>
+                            </div>
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" rel="noopener noreferrer" class="store-play-btn">
+                            <img src="Assests/icons/playstore.svg" alt="Google Play" />
+                            <div>
+                                <span class="btn-caption">GET IT ON</span>
+                                <span class="btn-label">Google Play</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="stage-links">
+                        <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank">Xem trên App Store <i class="ri-arrow-right-s-line"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank">Xem trên Google Play <i class="ri-arrow-right-s-line"></i></a>
                     </div>
                 </div>
 
-                <!-- Card 4: Check Calo 4 -->
-                <div class="duo-card dark-card">
-                    <div class="card-content">
-                        <span class="card-tag">Tỷ lệ Macro</span>
-                        <h3 class="card-title">Cân bằng tỷ lệ dinh dưỡng</h3>
-                        <p class="card-desc">Biểu đồ tròn trực quan hiển thị tỷ lệ % Macro, giúp bạn đạt mục tiêu tăng cơ, giảm mỡ hoặc giữ dáng ổn định.</p>
-                    </div>
-                    <div class="card-media">
-                        <div class="phone-mockup">
-                            <img src="Assests/checkcalo/check-calo-4.webp" alt="Biểu đồ tỷ lệ Macro trong Check Calo" loading="lazy" />
-                        </div>
+                <!-- Showcase Banner: checkcalo-banner.webp -->
+                <div class="stage-visual">
+                    <div class="banner-frame-container">
+                        <img src="Assests/checkcalo/checkcalo-banner.webp" alt="Check Calo Banner Giới thiệu" />
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <!-- SECTION 4: MỤC TIÊU CƠ THỂ & TIẾN TRÌNH SỨC KHỎE (Progress) -->
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <section class="feature-duo-section" id="tracking">
-            <div class="section-header">
-                <span class="section-label">Tiến trình & Mục tiêu</span>
-                <h2 class="section-title">Theo sát hành trình thay đổi vóc dáng.</h2>
-                <p class="section-subtitle">Ghi nhận tiến độ cân nặng, mức calo thâm hụt và xây dựng thói quen bền vững.</p>
-            </div>
-
-            <div class="duo-grid">
-                <!-- Card 5: Check Calo 5 -->
-                <div class="duo-card dark-card">
-                    <div class="card-content">
-                        <span class="card-tag">Báo cáo & Thống kê</span>
-                        <h3 class="card-title">Đồ thị tiến trình rõ ràng</h3>
-                        <p class="card-desc">Theo dõi sự biến động cân nặng và lượng calo tiêu thụ qua từng tuần và tháng để điều chỉnh chế độ tập luyện.</p>
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION 2: HERO 2 (LIGHT STAGE) - CAMERA AI NHẬN DIỆN      -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <section class="hero-stage hero-stage-light" id="hero2">
+                <div class="stage-header">
+                    <div class="stage-badge stage-badge-blue">
+                        <span>CAMERA AI</span>
                     </div>
-                    <div class="card-media">
-                        <div class="phone-mockup">
-                            <img src="Assests/checkcalo/check-calo-5.webp" alt="Đồ thị tiến trình sức khỏe" loading="lazy" />
-                        </div>
+                    <h2 class="stage-title">Chụp ảnh. Nhận diện.</h2>
+                    <h3 class="stage-subtitle">Tính Calo tức thì chỉ với một chạm.</h3>
+                    <p class="stage-desc">
+                        Thuật toán AI tự động nhận diện món ăn trong đĩa, tính toán khối lượng và đưa ra lượng calo chuẩn xác.
+                    </p>
+                    <div class="stage-links">
+                        <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank">Tải trải nghiệm ngay <i class="ri-arrow-right-s-line"></i></a>
                     </div>
                 </div>
 
-                <!-- Card 6: Check Calo 6 -->
-                <div class="duo-card light-card">
-                    <div class="card-content">
-                        <span class="card-tag">Cá nhân hóa</span>
-                        <h3 class="card-title">Thiết lập mục tiêu thông minh</h3>
-                        <p class="card-desc">Tính toán chỉ số TDEE & BMR tự động theo chiều cao, cân nặng và cường độ vận động riêng biệt của bạn.</p>
+                <div class="stage-visual">
+                    <div class="hero-phone-mockup">
+                        <img src="Assests/checkcalo/check-calo-1.webp" alt="Giao diện Camera AI Check Calo" />
                     </div>
-                    <div class="card-media">
-                        <div class="phone-mockup">
-                            <img src="Assests/checkcalo/check-calo-6.webp" alt="Thiết lập mục tiêu cân nặng cá nhân" loading="lazy" />
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION 3: HERO 3 (DARK STAGE) - BÓC TÁCH MACROS           -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <section class="hero-stage hero-stage-dark" id="hero3">
+                <div class="stage-header">
+                    <div class="stage-badge stage-badge-purple">
+                        <span>NUTRITION BREAKDOWN</span>
+                    </div>
+                    <h2 class="stage-title">Bóc tách dinh dưỡng.</h2>
+                    <h3 class="stage-subtitle">Rõ ràng từng gam Protein, Carbs, Fat.</h3>
+                    <p class="stage-desc">
+                        Không còn phải phỏng đoán. Toàn bộ thành phần vi lượng và đa lượng đều hiển thị chi tiết và trực quan.
+                    </p>
+                    <div class="stage-links">
+                        <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank">Xem trên App Store <i class="ri-arrow-right-s-line"></i></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank">Xem trên Google Play <i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+                </div>
+
+                <div class="stage-visual">
+                    <div class="hero-phone-mockup">
+                        <img src="Assests/checkcalo/check-calo-2.webp" alt="Bảng dinh dưỡng Check Calo" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION 4: 2-COLUMN GRID (CHECK-CALO-3 & CHECK-CALO-4)     -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <div class="hero-section4" id="grid1">
+                <!-- Card 4-1: check-calo-3.webp -->
+                <div class="grid-card grid-card-light">
+                    <div class="grid-card-header">
+                        <h3>Nhật ký bữa ăn</h3>
+                        <p>Quản lý các bữa sáng, trưa, tối và ăn nhẹ một cách khoa học.</p>
+                        <div class="stage-links">
+                            <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank">Khám phá <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid-card-visual">
+                        <div class="card-phone-mockup">
+                            <img src="Assests/checkcalo/check-calo-3.webp" alt="Nhật ký ăn uống Check Calo" />
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <!-- SECTION 5: SLIDER / SWIPER TOÀN DIỆN (Screenshots Carousel) -->
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <section class="gallery-slider-section" id="gallery">
-            <div class="section-header">
-                <span class="section-label">Trải nghiệm ứng dụng</span>
-                <h2 class="section-title">Khám phá toàn bộ giao diện Check Calo</h2>
-                <p class="section-subtitle">Giao diện tinh gọn, mượt mà chuẩn phong cách hiện đại với hỗ trợ Dark Mode & Đa ngôn ngữ.</p>
+                <!-- Card 4-2: check-calo-4.webp -->
+                <div class="grid-card grid-card-dark">
+                    <div class="grid-card-header">
+                        <h3>Cân bằng Macro</h3>
+                        <p>Biểu đồ năng lượng và tỷ lệ dinh dưỡng đạt chuẩn mục tiêu.</p>
+                        <div class="stage-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank">Tìm hiểu thêm <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid-card-visual">
+                        <div class="card-phone-mockup">
+                            <img src="Assests/checkcalo/check-calo-4.webp" alt="Biểu đồ tỷ lệ Macro Check Calo" />
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="slider-container">
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION 5: 2-COLUMN GRID (CHECK-CALO-5 & CHECK-CALO-6)     -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <div class="hero-section4" id="grid2">
+                <!-- Card 5-1: check-calo-5.webp -->
+                <div class="grid-card grid-card-dark">
+                    <div class="grid-card-header">
+                        <h3>Báo cáo tiến trình</h3>
+                        <p>Biểu đồ biến động cân nặng và lượng calo tiêu thụ theo tuần, tháng.</p>
+                        <div class="stage-links">
+                            <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank">Xem tiến độ <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid-card-visual">
+                        <div class="card-phone-mockup">
+                            <img src="Assests/checkcalo/check-calo-5.webp" alt="Báo cáo tiến trình Check Calo" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5-2: check-calo-6.webp -->
+                <div class="grid-card grid-card-light">
+                    <div class="grid-card-header">
+                        <h3>Mục tiêu cá nhân</h3>
+                        <p>Tự động tính toán TDEE và BMR theo thể trạng và mục tiêu cân nặng.</p>
+                        <div class="stage-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank">Thiết lập ngay <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid-card-visual">
+                        <div class="card-phone-mockup">
+                            <img src="Assests/checkcalo/check-calo-6.webp" alt="Thiết lập mục tiêu Check Calo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION 6: 2-COLUMN GRID (CHECK-CALO-7 & CHECK-CALO-8)     -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <div class="hero-section4">
+                <!-- Card 6-1: check-calo-7.webp -->
+                <div class="grid-card grid-card-light">
+                    <div class="grid-card-header">
+                        <h3>Giao diện tối ưu</h3>
+                        <p>Hỗ trợ Dark / Light mode và trải nghiệm đa ngôn ngữ Anh - Việt.</p>
+                        <div class="stage-links">
+                            <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank">Trải nghiệm <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid-card-visual">
+                        <div class="card-phone-mockup">
+                            <img src="Assests/checkcalo/check-calo-7.webp" alt="Giao diện đa ngôn ngữ Check Calo" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6-2: check-calo-8.webp -->
+                <div class="grid-card grid-card-dark">
+                    <div class="grid-card-header">
+                        <h3>Đồng bộ đám mây</h3>
+                        <p>Xác thực người dùng an toàn và lưu trữ tức thời trên Supabase.</p>
+                        <div class="stage-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank">Tìm hiểu thêm <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                    <div class="grid-card-visual">
+                        <div class="card-phone-mockup">
+                            <img src="Assests/checkcalo/check-calo-8.webp" alt="Đồng bộ dữ liệu Check Calo" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- CỤM SECTION SLIDER: SWIPER TOÀN BỘ 8 MÀN HÌNH APP              -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <div class="slider-section" id="slider">
+                <div class="slider-heading">
+                    <h2>Trải nghiệm ứng dụng Check Calo</h2>
+                    <p>Khám phá toàn bộ các tính năng được tinh chỉnh tỉ mỉ</p>
+                </div>
+
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-1.webp" alt="Check Calo Màn hình 1" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Camera AI Scanner</h4>
-                                    <p>Chụp ảnh và nhận diện bữa ăn tức thì</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-1.webp" alt="Màn hình 1" />
                             </div>
+                            <div class="slide-title">Camera AI</div>
+                            <div class="slide-subtitle">Nhận diện đĩa ăn tức thì</div>
                         </div>
 
-                        <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-2.webp" alt="Check Calo Màn hình 2" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Bóc tách Macros</h4>
-                                    <p>Đo lường Calo, Protein, Carbs, Fat</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-2.webp" alt="Màn hình 2" />
                             </div>
+                            <div class="slide-title">Phân tích Macros</div>
+                            <div class="slide-subtitle">Bóc tách Calo, Protein, Carbs, Fat</div>
                         </div>
 
-                        <!-- Slide 3 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-3.webp" alt="Check Calo Màn hình 3" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Nhật ký ăn uống</h4>
-                                    <p>Quản lý các bữa sáng, trưa, tối, phụ</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-3.webp" alt="Màn hình 3" />
                             </div>
+                            <div class="slide-title">Nhật ký ăn uống</div>
+                            <div class="slide-subtitle">Quản lý các bữa ăn trong ngày</div>
                         </div>
 
-                        <!-- Slide 4 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-4.webp" alt="Check Calo Màn hình 4" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Cân đối dinh dưỡng</h4>
-                                    <p>Biểu đồ năng lượng và mục tiêu ngày</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-4.webp" alt="Màn hình 4" />
                             </div>
+                            <div class="slide-title">Cân bằng dinh dưỡng</div>
+                            <div class="slide-subtitle">Biểu đồ tỷ lệ năng lượng</div>
                         </div>
 
-                        <!-- Slide 5 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-5.webp" alt="Check Calo Màn hình 5" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Báo cáo tuần & tháng</h4>
-                                    <p>Đồ thị xu hướng cân nặng & calo</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-5.webp" alt="Màn hình 5" />
                             </div>
+                            <div class="slide-title">Báo cáo tiến trình</div>
+                            <div class="slide-subtitle">Theo dõi cân nặng tuần & tháng</div>
                         </div>
 
-                        <!-- Slide 6 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-6.webp" alt="Check Calo Màn hình 6" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Mục tiêu thể chất</h4>
-                                    <p>Xây dựng kế hoạch giảm cân an toàn</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-6.webp" alt="Màn hình 6" />
                             </div>
+                            <div class="slide-title">Mục tiêu cá nhân</div>
+                            <div class="slide-subtitle">Tính toán TDEE và BMR chuẩn xác</div>
                         </div>
 
-                        <!-- Slide 7 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-7.webp" alt="Check Calo Màn hình 7" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Giao diện tối ưu</h4>
-                                    <p>Hỗ trợ Dark/Light mode & Đa ngôn ngữ</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-7.webp" alt="Màn hình 7" />
                             </div>
+                            <div class="slide-title">Giao diện thông minh</div>
+                            <div class="slide-subtitle">Chế độ sáng tối & đa ngôn ngữ</div>
                         </div>
 
-                        <!-- Slide 8 -->
                         <div class="swiper-slide">
-                            <div class="slide-card">
-                                <div class="slide-phone">
-                                    <img src="Assests/checkcalo/check-calo-8.webp" alt="Check Calo Màn hình 8" />
-                                </div>
-                                <div class="slide-info">
-                                    <h4>Đồng bộ dữ liệu</h4>
-                                    <p>Bảo mật & lưu trữ dữ liệu an toàn</p>
-                                </div>
+                            <div class="slide-phone-mockup">
+                                <img src="Assests/checkcalo/check-calo-8.webp" alt="Màn hình 8" />
                             </div>
+                            <div class="slide-title">Lưu trữ đám mây</div>
+                            <div class="slide-subtitle">Đồng bộ an toàn cùng Supabase</div>
                         </div>
                     </div>
 
-                    <!-- Navigation controls -->
-                    <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </section>
 
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <!-- SECTION 6: CALL TO ACTION (Download Banner) -->
-        <!-- ══════════════════════════════════════════════════════════════ -->
-        <section class="cta-section" id="download">
-            <div class="cta-container">
-                <div class="cta-glow"></div>
-                <img src="Assests/logo.png" alt="Check Calo App Logo" class="cta-app-logo" />
-                <h2 class="cta-title">Bắt đầu theo dõi calo thông minh ngay hôm nay</h2>
-                <p class="cta-desc">
-                    Tải miễn phí ứng dụng <strong>Check Calo</strong> trên App Store hoặc Google Play để làm chủ chế độ dinh dưỡng của bạn.
-                </p>
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <!-- FOOTER: APPLE 5-COLUMN FOOTER                                  -->
+            <!-- ══════════════════════════════════════════════════════════════ -->
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-disclaimer">
+                        * Thông tin calo và định lượng dinh dưỡng từ ảnh do AI phân tích mang tính tham khảo dựa trên thuật toán thị giác máy tính. Ứng dụng Check Calo hỗ trợ cả hai nền tảng iOS và Android.
+                    </div>
 
-                <div class="store-buttons-container cta-store-buttons">
-                    <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer" class="apple-store-btn" title="Tải trên App Store">
-                        <div class="btn-icon">
-                            <img src="Assests/icons/apple.svg" alt="Apple logo" />
+                    <div class="footer-columns">
+                        <div class="footer-col">
+                            <h4>Check Calo</h4>
+                            <a href="#hero1">Giới thiệu</a>
+                            <a href="#hero2">Camera AI</a>
+                            <a href="#hero3">Bóc tách Macro</a>
+                            <a href="#grid1">Nhật ký bữa ăn</a>
+                            <a href="#slider">Tất cả màn hình</a>
                         </div>
-                        <div class="btn-text">
-                            <span class="sub-text">Download on the</span>
-                            <span class="main-text">App Store</span>
+
+                        <div class="footer-col">
+                            <h4>Tải ứng dụng</h4>
+                            <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer">App Store (iOS)</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" rel="noopener noreferrer">Google Play (Android)</a>
+                            <a href="#hero1">Yêu cầu hệ thống</a>
                         </div>
-                    </a>
 
-                    <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" rel="noopener noreferrer" class="google-play-btn" title="Tải trên Google Play">
-                        <div class="btn-icon">
-                            <img src="Assests/icons/playstore.svg" alt="Google Play logo" />
+                        <div class="footer-col">
+                            <h4>Công nghệ</h4>
+                            <a href="#">React Native</a>
+                            <a href="#">Expo SDK 55</a>
+                            <a href="#">Supabase Backend</a>
+                            <a href="#">TypeScript</a>
+                            <a href="#">MMKV Storage</a>
                         </div>
-                        <div class="btn-text">
-                            <span class="sub-text">GET IT ON</span>
-                            <span class="main-text">Google Play</span>
+
+                        <div class="footer-col">
+                            <h4>Tác giả</h4>
+                            <a href="https://ngocthach.me" target="_blank" rel="noopener noreferrer">Đào Ngọc Thạch</a>
+                            <a href="https://github.com/Daongocthach20110564" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+                            <a href="https://ngocthach.me/#contact" target="_blank" rel="noopener noreferrer">Liên hệ công việc</a>
                         </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- ══════════════════════════════════════════════════════════════ -->
-    <!-- FOOTER (Apple Style) -->
-    <!-- ══════════════════════════════════════════════════════════════ -->
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-disclaimer">
-                <p>* Lượng calo và các giá trị dinh dưỡng do AI phân tích mang tính chất ước tính tham khảo dựa trên dữ liệu chuẩn hoá. Hãy tham khảo ý kiến chuyên gia dinh dưỡng khi cần kế hoạch ăn kiêng bệnh lý chuyên sâu.</p>
-            </div>
+                        <div class="footer-col">
+                            <h4>Chính sách</h4>
+                            <a href="#">Chính sách bảo mật</a>
+                            <a href="#">Điều khoản dịch vụ</a>
+                            <a href="#">Quyền riêng tư</a>
+                        </div>
+                    </div>
 
-            <div class="footer-links-grid">
-                <div class="footer-col">
-                    <h4>Ứng dụng</h4>
-                    <a href="#hero">Giới thiệu Check Calo</a>
-                    <a href="#features">Nhận diện bằng AI</a>
-                    <a href="#nutrition">Bảng dinh dưỡng & Macro</a>
-                    <a href="#tracking">Theo dõi cân nặng</a>
-                    <a href="#gallery">Hình ảnh thực tế</a>
+                    <div class="footer-bottom-bar">
+                        <div class="footer-copyright">
+                            Bản quyền © 2026 Check Calo by <a href="https://ngocthach.me" target="_blank" rel="noopener noreferrer">Đào Ngọc Thạch</a>. Bảo lưu mọi quyền.
+                        </div>
+                        <div class="footer-legal-links">
+                            <a href="#">Bảo mật</a>
+                            <a href="#">Điều khoản</a>
+                            <a href="https://ngocthach.me">Tác giả</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Tải ứng dụng</h4>
-                    <a href="https://apps.apple.com/us/app/check-calo/id6765718237" target="_blank" rel="noopener noreferrer">iOS (App Store)</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.checkcalo.app" target="_blank" rel="noopener noreferrer">Android (Google Play)</a>
-                    <a href="#download">Hướng dẫn cài đặt</a>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Công nghệ</h4>
-                    <span>React Native & Expo</span>
-                    <span>TypeScript</span>
-                    <span>Supabase Backend</span>
-                    <span>AI Vision API</span>
-                    <span>MMKV Storage</span>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Tác giả & Kết nối</h4>
-                    <a href="https://ngocthach.me" target="_blank" rel="noopener noreferrer">Đào Ngọc Thạch (Profile)</a>
-                    <a href="https://github.com/Daongocthach20110564" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-                    <a href="https://ngocthach.me/#contact" target="_blank" rel="noopener noreferrer">Liên hệ công việc</a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="footer-copy">
-                    Copyright © 2026 Check Calo by <a href="https://ngocthach.me" target="_blank" rel="noopener noreferrer">Đào Ngọc Thạch</a>. All rights reserved.
-                </div>
-                <div class="footer-legal">
-                    <a href="#">Chính sách bảo mật</a>
-                    <a href="#">Điều khoản sử dụng</a>
-                    <a href="https://ngocthach.me">Về tác giả</a>
-                </div>
-            </div>
+            </footer>
         </div>
-    </footer>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
